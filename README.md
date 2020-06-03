@@ -2,7 +2,7 @@
 Collection of aliases and functions for Oh My Zsh
 
 
-## Custom git functions
+### Custom git functions
 
 include functions file in your `.zshrc` file
 
