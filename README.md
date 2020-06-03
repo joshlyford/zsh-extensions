@@ -6,7 +6,7 @@ Collection of aliases and functions for Oh My Zsh
 
 Clone repo to locally and include wanted files in your `.zshrc` file.
 
-Examples are based on cloning repo into users folder on MacOS.
+Examples are based on cloning repo into you user folder on MacOS.
 
 `~/zsh-extensions`
 
