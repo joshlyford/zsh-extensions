@@ -2,9 +2,19 @@
 Collection of aliases and functions for Oh My Zsh
 
 
+## Basic Setup
+
+Clone repo to locally and include wanted files in your `.zshrc` file.
+
+Examples are based on cloning repo into users folder on MacOS.
+
+`~/zsh-extensions`
+
+
+
 ### Custom git functions
 
-include functions file in your `.zshrc` file
+include git-functions file in your `.zshrc` file
 
 ```
 source ~/zsh-extensions/git-functions.sh
