@@ -11,7 +11,8 @@ gitall() {
     then
         git commit -m "$1"
     else
-        git commit -m update
+        local mx=$(git status --porcelain)
+        git commit -m mx
     fi
 
     local branch=$(git rev-parse --abbrev-ref HEAD)
@@ -24,7 +25,7 @@ gitb() {
         git checkout -b "$1"
     else
     	local frd=$(date +%d.%m.%y-%s)
-        git checkout -b "jl/$frd"
+        git checkout -b "feature-$frd"
     fi
 }
 
