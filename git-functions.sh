@@ -13,7 +13,7 @@ gitall() {
         git commit -m "$1"
     else
         local mx=$(git status --porcelain)
-        git commit -m mx
+        git commit -m "$mx"
     fi
 
     local branch=$(git rev-parse --abbrev-ref HEAD)
