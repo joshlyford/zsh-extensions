@@ -1,4 +1,5 @@
 
+# checkout master branch
 gitm() {
     git checkout master
     git pull
