@@ -21,12 +21,18 @@ gitall() {
 }
 
 gitb() {
-    if [ "$1" != "" ] # or better, if [ -n "$1" ]
+    local prefix=""
+    if [ $ZSHE_USER ]
     then
-        git checkout -b "$1"
+        prefix="$ZSHE_USER/"
+    fi
+
+    if [ "$1" != "" ] # or better, if [ -n "$1" ]
+    then    
+        git checkout -b "${prefix}feature-$1"
     else
     	local frd=$(date +%d.%m.%y-%s)
-        git checkout -b "feature-$frd"
+        git checkout -b "${prefix}feature-$frd"
     fi
 }
 
