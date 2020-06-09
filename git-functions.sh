@@ -5,7 +5,7 @@ gitm() {
     git pull
 }
 
-
+# git add commit and push all in one
 gitall() {
     local branch=$(git rev-parse --abbrev-ref HEAD)
     git add .
