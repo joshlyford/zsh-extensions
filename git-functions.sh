@@ -7,16 +7,16 @@ gitm() {
 
 
 gitall() {
+    local branch=$(git rev-parse --abbrev-ref HEAD)
     git add .
     if [ "$1" != "" ] # or better, if [ -n "$1" ]
     then
         git commit -m "$1"
     else
-        local mx=$(git status --porcelain)
-        git commit -m "$mx"
+        #local mx=$(git status --porcelain)
+        local mx=$(date +%d.%m.%y)
+        git commit -m "Update $branch $mx"
     fi
-
-    local branch=$(git rev-parse --abbrev-ref HEAD)
     git push --set-upstream origin "$branch"
 }
 
